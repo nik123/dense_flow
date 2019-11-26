@@ -11,7 +11,8 @@ Please see the [opencv-3.1](https://github.com/yjxiong/dense_flow/tree/opencv-3.
 ```
 git clone --recursive http://github.com/yjxiong/dense_flow
 mkdir build && cd build
-cmake .. && make -j
+cmake -D CMAKE_PREFIX_PATH=<path-to-compiled-opencv-with-cuda-support> -D CUDA_TOOLKIT_ROOT_DIR=/usr/local/cuda-10.0/ ..
+make -j
 ```
 
 ### Usage
