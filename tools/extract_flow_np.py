@@ -13,7 +13,7 @@ def main():
     extractor = FlowExtractor(dev_id=0)
 
     if not os.path.exists(args.src):
-        raise ValueError
+        raise ValueError("Path doesn't exist:", args.src)
 
     src = np.load(args.src)
 
